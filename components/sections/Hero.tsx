@@ -73,7 +73,110 @@ export default function Hero() {
 
           </motion.div>
 
-          {/* RIGHT SIDE WILL COME IN PART 2 */}
+          <motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.9, delay: 0.2 }}
+  className="relative hidden lg:flex justify-center items-center"
+>
+  <div className="relative w-full max-w-[540px] aspect-square">
+
+    {/* Main Glass Card */}
+
+    <div className="absolute inset-0 rounded-[36px] border border-white/10 bg-white/[0.03] backdrop-blur-2xl p-8 shadow-[0_25px_80px_rgba(0,0,0,.45)]">
+
+      <div className="flex justify-between items-center">
+
+        <span className="text-neutral-500 uppercase tracking-[0.25em] text-xs">
+          SYSTEM
+        </span>
+
+        <span className="text-white">
+          ● Online
+        </span>
+
+      </div>
+
+      <div className="mt-10 space-y-5">
+
+        <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <h3 className="text-lg font-semibold">
+            AI Systems
+          </h3>
+
+          <p className="mt-2 text-sm text-neutral-400">
+            LLMs, AI Agents & Intelligent Workflows
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <h3 className="text-lg font-semibold">
+            Backend Engineering
+          </h3>
+
+          <p className="mt-2 text-sm text-neutral-400">
+            APIs, Databases & Scalable Architectures
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <h3 className="text-lg font-semibold">
+            Full Stack
+          </h3>
+
+          <p className="mt-2 text-sm text-neutral-400">
+            Next.js • TypeScript • Modern UX
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* Floating Card */}
+
+    <motion.div
+      animate={{
+        y: [0, -10, 0],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+      }}
+      className="absolute -top-6 -right-6 rounded-3xl border border-white/10 bg-[#111111]/90 backdrop-blur-xl px-6 py-5"
+    >
+      <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+        Focus
+      </p>
+
+      <h4 className="mt-2 text-xl font-semibold">
+        AI + Software
+      </h4>
+    </motion.div>
+
+    {/* Floating Card */}
+
+    <motion.div
+      animate={{
+        y: [0, 12, 0],
+      }}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+      }}
+      className="absolute -bottom-6 -left-6 rounded-3xl border border-white/10 bg-[#111111]/90 backdrop-blur-xl px-6 py-5"
+    >
+      <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+        Stack
+      </p>
+
+      <h4 className="mt-2 text-xl font-semibold">
+        Next.js • AI • APIs
+      </h4>
+    </motion.div>
+
+  </div>
+</motion.div>
 
         </div>
 

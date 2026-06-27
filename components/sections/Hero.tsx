@@ -181,7 +181,36 @@ export default function Hero() {
         </div>
 
       </div>
+{/* Scroll Indicator */}
 
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{
+    delay: 1,
+    duration: 1,
+  }}
+  className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center"
+>
+  <span className="text-[11px] uppercase tracking-[0.3em] text-neutral-500 mb-4">
+    Scroll
+  </span>
+
+  <motion.div
+    animate={{
+      y: [0, 10, 0],
+    }}
+    transition={{
+      duration: 1.8,
+      repeat: Infinity,
+    }}
+    className="h-12 w-[2px] rounded-full bg-gradient-to-b from-white to-transparent"
+  />
+</motion.div>
+
+{/* Soft Background Glow */}
+
+<div className="pointer-events-none absolute -top-44 left-1/2 h-[650px] w-[650px] -translate-x-1/2 rounded-full bg-white/[0.035] blur-[170px]" />
     </section>
   );
 }
